@@ -1,6 +1,9 @@
 import travelPlansData from '../assets/travel-plans.json';
+import { useState } from 'react';
 
 function TravelList() {
+  const [travelArr, setTravelArr] = useState(travelPlansData);
+
   const displayLabel = (cost) => {
     if (cost <= 350) {
       return <div className="great-deal">Great Deal</div>;
@@ -9,7 +12,12 @@ function TravelList() {
     }
   };
 
-  return travelPlansData.map((elementObj) => {
+  const deleteTravel = (travelToDelete) => {
+    const newTravelArr = travelArr.filter((travelObj) => travelObj.id !== travelToDelete);
+    setTravelArr(newTravelArr);
+  };
+
+  return travelArr.map((elementObj) => {
     return (
       <div className="TravelList" key={elementObj.id}>
         <div className="img-container">
@@ -26,6 +34,16 @@ function TravelList() {
           <div className="label-container">
             {displayLabel(elementObj.totalCost)}
             {elementObj.allInclusive && <div className="all-inclusive">All-Inclusive</div>}
+          </div>
+          <div>
+            <button
+              className="delete-btn"
+              onClick={() => {
+                deleteTravel(elementObj.id);
+              }}
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>

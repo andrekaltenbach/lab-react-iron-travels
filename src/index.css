@@ -73,8 +73,8 @@ button:focus-visible {
 }
 
 .img-container img {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   object-fit: cover;
   margin: 20px;
 }
@@ -108,6 +108,11 @@ button:focus-visible {
   border-radius: 5px;
   text-align: center;
   margin-left: 10px;
+}
+
+.delete-btn {
+  margin-top: 90px;
+
 }
 
 /* @media (prefers-color-scheme: light) {
