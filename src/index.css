@@ -79,6 +79,37 @@ button:focus-visible {
   margin: 20px;
 }
 
+.great-deal {
+  width: 90px;
+  height: 30px;
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.premium {
+  width: 90px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.label-container {
+  display: flex;
+}
+
+.all-inclusive {
+  width: 100px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
